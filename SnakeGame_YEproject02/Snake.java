@@ -61,13 +61,13 @@ import java.util.LinkedList;
                 newX = newX + 1;
             }
 
-        // フィールド外への移動を即ゲームオーバーとして扱うための境界判定
+        //フィールド外への移動を即ゲームオーバーとして扱うための境界判定。
         if (head.getX() < 0 || head.getY() < 0 || head.getX() >= 40 || head.getY() >= 40) {
             isLiving = false;
             return;
         }
 
-        // 自身との衝突判定：頭部が既存の体節と重なった場合はゲームオーバーとする
+        //自身との衝突判定：頭部が既存の体節と重なった場合はゲームオーバーとする。
         for (int i = 1; i < body.size(); i++) {
             Node node = body.get(i);
             if (head.getX() == node.getX() && head.getY() == node.getY()) {
@@ -75,14 +75,12 @@ import java.util.LinkedList;
                 return;
             }
         }
-        
-        // 移動処理：新しい頭部を追加し、末尾を削除することで長さを維持する
+        //移動処理：新しい頭部を追加し、末尾を削除することで長さを維持する。
         body.addFirst(new Node(newX, newY));
         body.removeLast();
     }
 
-
-    // 食物位置本身即为蛇前进的目标点，因此在头部直接追加节点来实现增长
+    //蛇を食べたら、その位置に1マス分伸びるので、頭にノードを追加している。
     public void eat(Node food) {
         body.addFirst(new Node(food.getX(), food.getY()));
     }
