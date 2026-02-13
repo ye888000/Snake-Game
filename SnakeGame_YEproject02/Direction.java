@@ -18,10 +18,11 @@ package SnakeGame_YEproject02;
  *@since 2026-02-06
  */
 
-public enum Direction {
+public enum Direction{
     UP,
     DOWN,
     LEFT,
     RIGHT;
 }
+
 
