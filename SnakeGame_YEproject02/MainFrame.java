@@ -23,18 +23,18 @@ import java.awt.Color;
  *·キーボード入力を受け取り、方向変更指示をSnakeに伝える。
  *
  *【設計上の取捨】
- * ·Timerで定期的にゲーム状態を更新し、ループ処理による画面応答遅延やプログラムのフリーズを回避。
- * ·描画ロジックをJPanel内に集中させ、repaint()で刷新タイミングを統一。
- * ·MainFrameはゲームルールを直接実装せず、制御・調整層としてのみ存在。
+ *·Timerで定期的にゲーム状態を更新し、ループ処理による画面応答遅延やプログラムのフリーズを回避。
+ *·描画ロジックをJPanel内に集中させ、repaint()で刷新タイミングを統一。
+ *·MainFrameはゲームルールを直接実装せず、制御・調整層としてのみ存在。
  *
  *【协作クラス】
  *·Snake：蛇の移動、成長、存活状態判定を担当。
  *·Node：蛇の体と食べ物の座標ノードを表現。
  *·Direction：蛇の移動方向を限定する列挙型。
  *
- * @author ye888000
- * @version 1.0
- * @since 2026-02-06
+ *@author ye888000
+ *@version 1.0
+ *@since 2026-02-06
  */
 
 public class MainFrame extends JFrame{
@@ -177,5 +177,6 @@ public class MainFrame extends JFrame{
         new MainFrame();
     }
 }
+
 
 
