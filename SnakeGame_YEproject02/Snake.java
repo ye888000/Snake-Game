@@ -3,8 +3,8 @@ package SnakeGame_YEproject02;
 import java.util.LinkedList;
 
 /**
- * 【Snake層】
- * 蛇を表すクラス
+ *【Snake層】
+ *蛇を表すクラス
  *
  * 【設計意図】
  * 蛇の体（Node のリスト）と方向を管理し、
@@ -103,4 +103,5 @@ import java.util.LinkedList;
         return isLiving;
     }
 }
+
 
